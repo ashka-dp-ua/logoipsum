@@ -9,7 +9,7 @@ body {
     background: rgba(255, 113, 67, 0.27);
     padding: 38px 0 48px;
 }
-.header__flex, .about, .footer__flex {
+.header__flex, .about, .footer__flex, .subscribe, .plan__flex {
     /* элементы стали в строку */
     display: flex;
     /* расстояние между элементами */
@@ -105,3 +105,111 @@ body {
 /* .nav__link_support {
     color: #19191B;;
 } */
+/* вторая секция */
+.subscribe{
+    margin-bottom: 85px;
+}
+.subscribe__title{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 57px;
+    letter-spacing: -1.56316px;
+    color: #19191B;
+    margin-bottom: 38px;
+}
+.input {
+    width: 302px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid #7087FF;
+    padding-left: 14px;
+    /* сохраняет ширину и высоту поля, не отминусовуя от него border: 1px и padding-left: 14рх */
+    box-sizing: border-box;
+    margin-right: 39px;
+}
+/* псевдоэлемент (не путать с псевдоклассом) */
+/* задаём свойства для надписи Email внутри формы */
+/* чтоб текст при вводе так же был жирным добавляем класс .input */
+.input::placeholder, .input {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.531474px;
+    color: #000000;
+}
+/* отключаем псевдо каласс при наборе текста на input*/
+.input:focus {
+    outline: none;
+}
+
+/* 3 СЕКЦИЯ */
+.plan {
+    margin-bottom: 132px;
+}
+.plan__title {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -1.87579px;
+    color: #19191B;
+    max-width: 504px;
+    margin-bottom: 110px;
+}
+.item {
+    width: 330px;
+    background: #F8F8F8;
+    /* закругляем границы блока */
+    border-radius: 10px;
+    /* центрируем текст по центру блока */
+    text-align: center;
+    /* отступы от внутренних краёв блока */
+    padding: 37px 0 27px;
+}
+/* при наведении блок становится оранжевым и меняется цвет текста */
+.item:hover {
+    transition: 500ms; /* для плавного перехода*/
+    background: #FF7143;
+    box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+}
+.item__text {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.562737px;
+    color: #696871;
+}
+.item:hover .item__text,
+.item:hover .item__title,
+.item:hover .item__li {
+    color: white;
+    transition: 500ms;
+}
+.item__title {
+    font-size: 60px;
+    line-height: 56px;
+    letter-spacing: -1.03448px;
+    color: #1D293F;
+    margin: 22px 0 28px;
+}
+.item__title span {
+    font-size: 28px;
+}
+.item__li {
+    list-style: none;
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: -0.531474px;
+    color: #696871;
+}
+
+.btn__item {
+    width: 285px;
+    background: white;
+    color: #5454D4;
+    margin-top: 36px;
+}
+/* при (в) .item:hover применяется к .btn__item */
+.item:hover .btn__item {
+    background: #9F3919;
+    color: white;
+    transition: 500ms;
+}
